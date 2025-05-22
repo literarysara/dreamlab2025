@@ -153,11 +153,14 @@
         layer.bindPopup(popupTemplate);
     }
     /* function to add objects to map */
-    function objectMarkers(feature,latlng) {
-        var marker = L.marker(latlng, {alt: feature.properties.title});
-        {% if site.data.theme.map-cluster == true %}markers.addLayer(marker);{% endif %}
-        return marker;
-    }
+ function objectMarkers(feature,latlng){
+   var marker = new L.CircleMarker(latlng, {
+             radius: 5,
+              color: "black",
+             alt: feature.properties.title,
+        });
+    return marker;
+}
 
     /* use geoJson features to add objects to map */
     var mapFeatures = L.geoJson(geodata, {
