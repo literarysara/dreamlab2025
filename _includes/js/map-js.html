@@ -154,26 +154,10 @@
     }
     /* function to add objects to map */
 
-function getColor(feature){
-    if (feature.properties["subject"].contains("Museum")){
-        return  'orange';
-    } else if (feature.properties["subject"].contains("Library")){
-        return  'purple';
-    } else if (feature.properties["subject"].contains("Arts")){
-        return  'pink';
-} else if (feature.properties["subject"].contains("Historical")){
-        return  'brown';
-} else if (feature.properties["subject"].contains("Grantmaking")){
-        return  'green';
-} else if (feature.properties["subject"].contains("Uncategorized")){
-        return  'black';
-    }
-}
-
  function objectMarkers(feature,latlng){
    var marker = new L.CircleMarker(latlng, {
              radius: 5,
-             color: getColor(feature),
+             color: "black",
              alt: feature.properties.title,
         });
     return marker;
