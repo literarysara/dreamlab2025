@@ -159,14 +159,13 @@ function getColor(feature){
         return  'orange';
     } else if (feature.properties["subject"].contains("Library")){
         return  'purple';
-    } else if 
-(feature.properties["subject"].contains("Arts")){
+    } else if (feature.properties["subject"].contains("Arts")){
         return  'pink';
-(feature.properties["subject"].contains("Historical")){
+} else if (feature.properties["subject"].contains("Historical")){
         return  'brown';
-(feature.properties["subject"].contains("Grantmaking")){
+} else if (feature.properties["subject"].contains("Grantmaking")){
         return  'green';
-(feature.properties["subject"].contains("Uncategorized")){
+} else if (feature.properties["subject"].contains("Uncategorized")){
         return  'black';
     }
 }
