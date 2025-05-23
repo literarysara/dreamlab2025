@@ -155,20 +155,24 @@
     /* function to add objects to map */
 
 function getColor(feature){
-  switch (feature.properties["locale"]) {
-            case 'City':
+  switch (feature.properties["subject"]) {
+            case 'arts, entertainment, and recreation':
                 return  'orange';
-            case 'Rural':
+            case 'other grantmaking and giving services':
                 return 'green';
-            case 'Suburb':
+            case 'colleges, universities, and professional schools':
                 return 'blue';
-            case 'Town':
+            case 'museum':
                 return 'purple';
+            case 'libraries and archives':
+                return 'lavender';
+            case 'historical organizations':
+                return 'pink';
             default:
                 return 'black';
         }
     }
-
+    
  function objectMarkers(feature,latlng){
    var marker = new L.CircleMarker(latlng, {
              radius: 5,
