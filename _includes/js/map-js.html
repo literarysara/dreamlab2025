@@ -157,25 +157,11 @@
  function objectMarkers(feature,latlng){
    var marker = new L.CircleMarker(latlng, {
              radius: 5,
+             color: "black"
              alt: feature.properties.title,
         });
     return marker;
 }
-
-function getColor(feature, latlng){
-  switch (feature.properties["locale"]) {
-            case 'City':
-                return  'orange';
-            case 'Rural':
-                return 'green';
-            case 'Suburb':
-                return 'blue';
-            case 'Town':
-                return 'pink';
-            default:
-                return 'black';
-        }
-    }
 
     /* use geoJson features to add objects to map */
     var mapFeatures = L.geoJson(geodata, {
