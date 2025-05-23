@@ -154,7 +154,15 @@
     }
     /* function to add objects to map */
 
-function getColor(feature){
+ function objectMarkers(feature,latlng){
+   var marker = new L.CircleMarker(latlng, {
+             radius: 5,
+             alt: feature.properties.title,
+        });
+    return marker;
+}
+
+function getColor(feature, latlng){
   switch (feature.properties["locale"]) {
             case 'City':
                 return  'orange';
@@ -168,14 +176,6 @@ function getColor(feature){
                 return 'black';
         }
     }
-
- function objectMarkers(feature,latlng){
-   var marker = new L.CircleMarker(latlng, {
-             radius: 5,
-             alt: feature.properties.title,
-        });
-    return marker;
-}
 
     /* use geoJson features to add objects to map */
     var mapFeatures = L.geoJson(geodata, {
