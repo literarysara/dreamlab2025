@@ -155,18 +155,14 @@
     /* function to add objects to map */
 
 function getColor(feature){
-  switch (feature.properties["subject"]) {
-            case 'arts, entertainment, and recreation':
+  switch (feature.properties["locale"]) {
+            case 'City':
                 return  'orange';
-            case 'other grantmaking and giving services':
+            case 'Rural':
                 return 'green';
-            case 'colleges, universities, and professional schools':
+            case 'Suburb':
                 return 'blue';
-            case 'museum':
-                return 'purple';
-            case 'libraries and archives':
-                return 'lavender';
-            case 'historical organizations':
+            case 'Town':
                 return 'pink';
             default:
                 return 'black';
