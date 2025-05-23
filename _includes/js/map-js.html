@@ -155,23 +155,21 @@
     /* function to add objects to map */
 
 function getColor(feature){
-  switch (feature.properties["subject"]) {
-            case 'Arts, Entertainment, and Recreation':
-                return  'orange';
-            case 'Other Grantmaking and Giving Services':
-                return 'green';
-            case 'Colleges, Universities, and Professional Schools':
-                return 'blue';
-            case 'Museum':
-                return 'purple';
-            case 'Libraries and Archives':
-                return 'lavender';
-            case 'Historical Organizations':
-                return 'pink';
-            default:
-                return 'black';
-        }
+    if (feature.properties["subject"].contains("Museum")){
+        return  'orange';
+    } else if (feature.properties["subject"].contains("Library")){
+        return  'purple';
+    } else if 
+(feature.properties["subject"].contains("Arts")){
+        return  'pink';
+(feature.properties["subject"].contains("Historical")){
+        return  'brown';
+(feature.properties["subject"].contains("Grantmaking")){
+        return  'green';
+(feature.properties["subject"].contains("Uncategorized")){
+        return  'black';
     }
+}
 
  function objectMarkers(feature,latlng){
    var marker = new L.CircleMarker(latlng, {
