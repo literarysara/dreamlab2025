@@ -22,10 +22,10 @@ source-code: https://github.com/CollectionBuilder/collectionbuilder-gh
 # title of site appears in banner
 title: Categorizing Uncategorized Pennsylvania Museums
 # tagline, a short phrase that will appear throughout the site in the top banner
-tagline: Using NEETC and NAICS data to categorize "Uncategorized or General Museums"
+tagline: Exploring Collection Builder capabilities using IMLS data
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
-description: "Exploring CollectionBuilder through pedantry"
+description: "This project uses a subset of IMLS Museum Data Files to look at the industrial classification of Pennsylvania institutions designated \"Uncategorized or General Museums\" by IMLS."
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
 author: Sara Davis
 
