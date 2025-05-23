@@ -154,10 +154,25 @@
     }
     /* function to add objects to map */
 
+function getColor(feature){
+  switch (feature.properties["locale"]) {
+            case 'City':
+                return  'orange';
+            case 'Rural':
+                return 'green';
+            case 'Suburb':
+                return 'blue';
+            case 'Town':
+                return 'purple';
+            default:
+                return 'black';
+        }
+    }
+
  function objectMarkers(feature,latlng){
    var marker = new L.CircleMarker(latlng, {
              radius: 5,
-             color: "black"
+             color: getColor(feature),
              alt: feature.properties.title,
         });
     return marker;
