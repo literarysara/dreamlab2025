@@ -8,20 +8,19 @@ credits: true
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg" %}
+{% include feature/jumbotron.html objectid="mercer-fonthill-museum.jpg %}
 
 {% include feature/nav-menu.html sections="About the Collection;About the About Page" %}
 
 ## About the Collection
 
-This site is generated using [CollectionBuilder-GH](https://collectionbuilding.github.io/gh/), a project to create a free and simple digital collection using [GitHub Pages](https://pages.github.com/) from: 
+This project was created by Sara Davis during the workshop "Small Data, Big Dreams: Minimal Computing for Data Collection & Visualization" during <a href="https://pricelab.sas.upenn.edu/events/dream-lab-2025">Dream Lab 2025</a>.
 
-- a CSV of collection metadata
-- a folder of JPG images or PDF documents
+The project uses a subset of the <a href="https://www.datalumos.org/datalumos/project/219155/version/V1/view?path=/datalumos/219155/fcr:versions/V1">Museum Data Files (MDF)</a> published by the Institute of Museum and Library Services (IMLS) in 2018 and preserved on DataLumos. The MDF includes more than 30,000 observations of museums across the United States, segmented by museum discipline. The category "Uncategorized or General Museums" (GMU) includes institutions from maritime museums to historical societies and grantmaking organizations to recreational attractions. Some, but not all, of these institutions have designations from the North American Industrial Classification System (NAICS) and National Taxonomy of Exempt Entities Core Codes (NTEEC). These taxonomies provide a  
 
-The template repository features four objects from the University of Idaho Library's [Digital Collections](https://www.lib.uidaho.edu/digital). 
+For this website, I limited my dataset to GMU observations geocoded in the state of Pennsylvania, which totaled **325** institutions. I also added NAICS and NTEEC categories to the discipline category, which offered a more detailed picture of what these institutions do; unsurprisingly, the largest categories were "Museum" and "Colleges, universities, and professional schools." Yet there are still **142** institutions with no designation beyond "Uncategorized," including the Rosenbach Museum and Library, a historical house and rare book library where I worked in 2016-2018. Thus, this project invites questions that might be answered by different treatments of the IMLS data. For example, are "Uncategorized" museums more likely to be in urban, suburn, or rural locales? Do "Uncategorized" museums exhibit a different revenue range than the total list? Etc. 
 
-For full details of creating your own collection site, visit [CollectionBuilder Documentation](https://collectionbuilder.github.io/cb-docs/)!
+The object icons were created by 
+<a href="https://www.flaticon.com/authors/freepik" title="Freepik icons - Flaticon">Freepik</a> and represent each museum's locale (city, town, suburb, or rural) as designated by IMLS. 
 
-<!-- IMPORTANT!!! DELETE this comment and the include below when you are finished editing this page for your collection. The include below introduces about page features. They will show up on your collection's about page until you delete it.  -->
-{% include cb/about_the_about.md %} 
+
