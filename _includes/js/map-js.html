@@ -156,23 +156,23 @@
 
 function getColor(feature){
   switch (feature.properties["subject"]) {
-            case 'arts, entertainment, and recreation':
+            case 'Arts, Entertainment, and Recreation':
                 return  'orange';
-            case 'other grantmaking and giving services':
+            case 'Other Grantmaking and Giving Services':
                 return 'green';
-            case 'colleges, universities, and professional schools':
+            case 'Colleges, Universities, and Professional Schools':
                 return 'blue';
-            case 'museum':
+            case 'Museum':
                 return 'purple';
-            case 'libraries and archives':
+            case 'Libraries and Archives':
                 return 'lavender';
-            case 'historical organizations':
+            case 'Historical Organizations':
                 return 'pink';
             default:
                 return 'black';
         }
     }
-    
+
  function objectMarkers(feature,latlng){
    var marker = new L.CircleMarker(latlng, {
              radius: 5,
