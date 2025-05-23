@@ -8,7 +8,7 @@ credits: true
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="mercer-fonthill-museum" %}
+{% include feature/jumbotron.html objectid="https://www.mercermuseum.org/wp-content/uploads/2018/11/Kevin-Crawford-VBC-Mercer-Museum-51-cropped.jpg" %}
 
 ## About the Collection
 
